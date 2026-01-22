@@ -30,6 +30,7 @@ h1 {
 .cet,
 .gst,
 .ist,
+.hkt,
 .aest,
 .nzdt {
     background: rgb(55, 53, 53);
@@ -50,6 +51,7 @@ h1 {
 .cet:hover,
 .gst:hover,
 .ist:hover,
+.hkt:hover,
 .aest:hover,
 .nzdt:hover {
 box-shadow: 
@@ -132,6 +134,11 @@ box-shadow:
     color: #ff8b94;
 }
 
+.hkt .info p:first-child,
+.hkt .time p {
+    color: #b19cd9;
+}
+
 .aest .info p:first-child,
 .aest .time p {
     color: #c7ceea;
@@ -153,6 +160,7 @@ box-shadow:
     .cet,
     .gst,
     .ist,
+    .hkt,
     .aest,
     .nzdt {
         flex-direction: column;
@@ -200,6 +208,7 @@ box-shadow:
     .cet,
     .gst,
     .ist,
+    .hkt,
     .aest,
     .nzdt {
         padding: 15px;
