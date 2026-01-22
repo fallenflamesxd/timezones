@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('city.png');
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-family: "Gravitas";
+    text-align: center;
+    color: rgb(216, 239, 255);
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.user_zone,
+.gmt,
+.cet,
+.gst,
+.ist,
+.aest,
+.nzdt {
+    background: rgb(55, 53, 53);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user_zone:hover,
+.gmt:hover,
+.cet:hover,
+.gst:hover,
+.ist:hover,
+.aest:hover,
+.nzdt:hover {
+box-shadow: 
+	10px 5px 5px white,
+	-10px -5px 5px white;
+	transition: 0.5s;
+}
+
+.info {
+    flex: 0 0 auto;
+    border-right: 2px solid #e0e0e0;
+    padding-right: 25px;
+    min-width: 120px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+.info p:first-child {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+.info p:last-child {
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+.time {
+    flex: 1;
+}
+
+.time p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #667eea;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+}
+
+.ppl {
+    flex: 0 0 auto;
+    border-left: 2px solid #e0e0e0;
+    padding-left: 25px;
+    min-width: 180px;
+}
+
+.ppl li {
+    list-style: none;
+    color: #e2fbff;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* Different color accents for each timezone */
+.user_zone .info p:first-child,
+.user_zone .time p {
+    color: #ff6b6b;
+}
+
+.gmt .info p:first-child,
+.gmt .time p {
+    color: #4ecdc4;
+}
+
+.cet .info p:first-child,
+.cet .time p {
+    color: #ffe66d;
+}
+
+.gst .info p:first-child,
+.gst .time p {
+    color: #a8e6cf;
+}
+
+.ist .info p:first-child,
+.ist .time p {
+    color: #ff8b94;
+}
+
+.aest .info p:first-child,
+.aest .time p {
+    color: #c7ceea;
+}
+
+.nzdt .info p:first-child,
+.nzdt .time p {
+    color: #ffd93d;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .user_zone,
+    .gmt,
+    .cet,
+    .gst,
+    .ist,
+    .aest,
+    .nzdt {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .info,
+    .ppl {
+        border-right: none;
+        border-left: none;
+        border-top: 2px solid #e0e0e0;
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 15px;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .time p {
+        font-size: 1.5em;
+    }
+
+    .info p:first-child {
+        font-size: 1.1em;
+    }
+
+    .ppl li {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .user_zone,
+    .gmt,
+    .cet,
+    .gst,
+    .ist,
+    .aest,
+    .nzdt {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .time p {
+        font-size: 1.2em;
+    }
+}
