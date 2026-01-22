@@ -92,6 +92,19 @@ function updateAESTClock() {
 updateAESTClock();
 setInterval(updateAESTClock, 1000);
 
+//AEDT time----------------------------------------------------
+
+function updateAEDTClock() {
+    const now = new Date();
+    const aedtTime = now.toLocaleTimeString('en-US', {
+        timeZone: 'Australia/Sydney'
+    });
+    document.getElementById('aedt_time').textContent = aedtTime;
+}
+
+updateAEDTClock();
+setInterval(updateAEDTClock, 1000);
+
 //NZDT time----------------------------------------------------
 
 function updateNZDTClock() {

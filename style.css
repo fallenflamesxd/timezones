@@ -32,6 +32,7 @@ h1 {
 .ist,
 .hkt,
 .aest,
+.aedt,
 .nzdt {
     background: rgb(55, 53, 53);
     border-radius: 12px;
@@ -53,6 +54,7 @@ h1 {
 .ist:hover,
 .hkt:hover,
 .aest:hover,
+.aedt:hover,
 .nzdt:hover {
 box-shadow: 
 	10px 5px 5px white,
