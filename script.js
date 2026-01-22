@@ -66,6 +66,19 @@ function updateISTClock() {
 updateISTClock();
 setInterval(updateISTClock, 1000);
 
+//HKT time----------------------------------------------------
+
+function updateHKTClock() {
+    const now = new Date();
+    const hktTime = now.toLocaleTimeString('en-US', {
+        timeZone: 'Asia/Hong_Kong'
+    });
+    document.getElementById('hkt_time').textContent = hktTime;
+}
+
+updateHKTClock();
+setInterval(updateHKTClock, 1000);
+
 //AEST time----------------------------------------------------
 
 function updateAESTClock() {
