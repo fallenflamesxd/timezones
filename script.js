@@ -1,4 +1,4 @@
-//user time----------------------------------------------------
+//USER time----------------------------------------------------
 
 const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 document.getElementById('user_zone_text').textContent = userTimeZone;

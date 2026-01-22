@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
 
+/* general */ 
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +18,8 @@ body {
     padding: 40px 20px;
 }
 
+/* text */
+
 h1 {
     font-family: "Gravitas";
     text-align: center;
@@ -23,43 +27,6 @@ h1 {
     margin-bottom: 50px;
     font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.user_zone,
-.gmt,
-.cet,
-.gst,
-.ist,
-.hkt,
-.aest,
-.aedt,
-.nzdt {
-    background: rgb(55, 53, 53);
-    border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.user_zone:hover,
-.gmt:hover,
-.cet:hover,
-.gst:hover,
-.ist:hover,
-.hkt:hover,
-.aest:hover,
-.aedt:hover,
-.nzdt:hover {
-box-shadow: 
-	10px 5px 5px white,
-	-10px -5px 5px white;
-	transition: 0.5s;
 }
 
 .info {
@@ -110,7 +77,47 @@ box-shadow:
     line-height: 1.6;
 }
 
-/* Different color accents for each timezone */
+/* times */
+
+.user_zone,
+.gmt,
+.cet,
+.gst,
+.ist,
+.hkt,
+.aest,
+.aedt,
+.nzdt {
+    background: rgb(55, 53, 53);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user_zone:hover,
+.gmt:hover,
+.cet:hover,
+.gst:hover,
+.ist:hover,
+.hkt:hover,
+.aest:hover,
+.aedt:hover,
+.nzdt:hover {
+box-shadow: 
+	10px 5px 5px white,
+	-10px -5px 5px white;
+	transition: 0.5s;
+}
+
+/* colours */
+
 .user_zone .info p:first-child,
 .user_zone .time p {
     color: #ff6b6b;
@@ -155,6 +162,8 @@ box-shadow:
 .nzdt .time p {
     color: #ffd93d;
 }
+
+/* flex and paddings */
 
 @media (max-width: 768px) {
     h1 {
