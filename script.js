@@ -14,6 +14,19 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
+//EST time----------------------------------------------------
+
+function updateESTClock() {
+    const now = new Date();
+    const estTime = now.toLocaleTimeString('en-US', {
+        timeZone: 'EST'
+    });
+    document.getElementById('est_time').textContent = estTime;
+}
+
+updateESTClock();
+setInterval(updateESTClock, 1000);
+
 //GMT time----------------------------------------------------
 
 function updateGMTClock() {
