@@ -84,7 +84,7 @@ setInterval(updateHKTClock, 1000);
 function updateAESTClock() {
     const now = new Date();
     const aestTime = now.toLocaleTimeString('en-US', {
-        timeZone: 'Australia/Sydney'
+        timeZone: 'Australia/Brisbane'
     });
     document.getElementById('aest_time').textContent = aestTime;
 }
