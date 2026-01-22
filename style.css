@@ -80,6 +80,7 @@ h1 {
 /* times */
 
 .user_zone,
+.est,
 .gmt,
 .cet,
 .gst,
@@ -102,6 +103,7 @@ h1 {
 }
 
 .user_zone:hover,
+.est:hover,
 .gmt:hover,
 .cet:hover,
 .gst:hover,
@@ -121,6 +123,11 @@ box-shadow:
 .user_zone .info p:first-child,
 .user_zone .time p {
     color: #ff6b6b;
+}
+
+.est .info p:first-child,
+.est .time p {
+    color: #81cd4e;
 }
 
 .gmt .info p:first-child,
