@@ -86,6 +86,7 @@ h1 {
 .gst,
 .ist,
 .hkt,
+.acdt,
 .aest,
 .aedt,
 .nzdt {
@@ -109,6 +110,7 @@ h1 {
 .gst:hover,
 .ist:hover,
 .hkt:hover,
+.acdt:hover,
 .aest:hover,
 .aedt:hover,
 .nzdt:hover {
@@ -155,6 +157,11 @@ box-shadow:
     color: #b19cd9;
 }
 
+.acdt .info p:first-child,
+.acdt .time p {
+    color: #eac7d6;
+}
+
 .aest .info p:first-child,
 .aest .time p {
     color: #c7ceea;
@@ -185,6 +192,7 @@ box-shadow:
     .gst,
     .ist,
     .hkt,
+    .acdt,
     .aest,
     .aedt,
     .nzdt {
@@ -235,6 +243,7 @@ box-shadow:
     .gst,
     .ist,
     .hkt,
+    .acdt,
     .aest,
     .aedt,
     .nzdt {

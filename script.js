@@ -92,6 +92,19 @@ function updateHKTClock() {
 updateHKTClock();
 setInterval(updateHKTClock, 1000);
 
+//ACDT time----------------------------------------------------
+
+function updateACDTClock() {
+    const now = new Date();
+    const acdtTime = now.toLocaleTimeString('en-US', {
+        timeZone: 'Australia/Adelaide'
+    });
+    document.getElementById('acdt_time').textContent = acdtTime;
+}
+
+updateACDTClock();
+setInterval(updateACDTClock, 1000);
+
 //AEST time----------------------------------------------------
 
 function updateAESTClock() {
