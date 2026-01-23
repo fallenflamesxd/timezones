@@ -19,7 +19,7 @@ setInterval(updateClock, 1000);
 function updateESTClock() {
     const now = new Date();
     const estTime = now.toLocaleTimeString('en-US', {
-        timeZone: 'EST'
+        timeZone: 'America/New_York'
     });
     document.getElementById('est_time').textContent = estTime;
 }
