@@ -23,6 +23,49 @@
         </div>
 
         <!--------------------------------------------->
+
+        <!--time conv-->
+        <div class="time_converter">
+            <h2>Time Converter</h2>
+            <div>
+                <label for="source_time">Date and Time:</label>
+                <input type="datetime-local" id="source_time">
+            </div>
+            <div>
+                <label for="source_tz">From Timezone:</label>
+                <select id="source_tz">
+                    <option value="America/New_York">EST (GMT-5)</option>
+                    <option value="UTC">GMT (GMT+0)</option>
+                    <option value="Europe/Paris">CET (GMT+1)</option>
+                    <option value="Atlantic/South_Georgia">GST (GMT-2)</option>
+                    <option value="Asia/Kolkata">IST (GMT+5:30)</option>
+                    <option value="Asia/Hong_Kong">HKT (GMT+8)</option>
+                    <option value="Australia/Adelaide">ACDT (GMT+10:30)</option>
+                    <option value="Australia/Brisbane">AEST (GMT+11)</option>
+                    <option value="Australia/Sydney">AEDT (GMT+11)</option>
+                    <option value="Pacific/Auckland">NZDT (GMT+13)</option>
+                </select>
+            </div>
+            <div>
+                <label for="target_tz">To Timezone:</label>
+                <select id="target_tz">
+                    <option value="America/New_York">EST (GMT-5)</option>
+                    <option value="UTC">GMT (GMT+0)</option>
+                    <option value="Europe/Paris">CET (GMT+1)</option>
+                    <option value="Atlantic/South_Georgia">GST (GMT-2)</option>
+                    <option value="Asia/Kolkata">IST (GMT+5:30)</option>
+                    <option value="Asia/Hong_Kong">HKT (GMT+8)</option>
+                    <option value="Australia/Adelaide">ACDT (GMT+10:30)</option>
+                    <option value="Australia/Brisbane">AEST (GMT+11)</option>
+                    <option value="Australia/Sydney">AEDT (GMT+11)</option>
+                    <option value="Pacific/Auckland">NZDT (GMT+13)</option>
+                </select>
+            </div>
+            <button id="convert_btn">Convert</button>
+            <div id="converted_time"></div>
+        </div>
+
+        <!--------------------------------------------->
         
         <div class="est"> <!--EST timezone-->
             <div class="info">

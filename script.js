@@ -143,3 +143,50 @@ function updateNZDTClock() {
 
 updateNZDTClock();
 setInterval(updateNZDTClock, 1000);
+
+// Time Converter ----------------------------------------------------
+
+function getOffset(tz, date = new Date()) {
+    const utc = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
+    const tzDate = new Date(date.toLocaleString('en-US', {timeZone: tz}));
+    return (tzDate - utc) / 60000;
+}
+
+document.getElementById('convert_btn').addEventListener('click', () => {
+    const sourceTimeInput = document.getElementById('source_time').value;
+    const sourceTz = document.getElementById('source_tz').value;
+    const targetTz = document.getElementById('target_tz').value;
+
+    if (!sourceTimeInput) {
+        document.getElementById('converted_time').textContent = 'Please enter a date and time.';
+        return;
+    }
+
+    // Parse the input
+    const [datePart, timePart] = sourceTimeInput.split('T');
+    const [year, month, day] = datePart.split('-').map(Number);
+    const [hour, min] = timePart.split(':').map(Number);
+
+    // Create fake Date (interpreted as local time)
+    const fakeDate = new Date(year, month - 1, day, hour, min);
+
+    // Get offsets
+    const localOffset = fakeDate.getTimezoneOffset();
+    const sourceOffset = getOffset(sourceTz, fakeDate);
+
+    // Adjust to correct moment
+    const correctDate = new Date(fakeDate.getTime() + (sourceOffset - localOffset) * 60000);
+
+    // Format in target timezone
+    const convertedTime = correctDate.toLocaleString('en-US', {
+        timeZone: targetTz,
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+
+    document.getElementById('converted_time').textContent = `Converted Time: ${convertedTime}`;
+});
