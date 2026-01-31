@@ -15,7 +15,15 @@ body {
     background-attachment: scroll;
     background-position: center;
     min-height: 100vh;
-    padding: 40px 20px;
+    padding: 50px 30px;
+}
+
+.zones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 /* text */
@@ -24,15 +32,15 @@ h1 {
     font-family: "Gravitas One";
     text-align: center;
     color: rgb(216, 239, 255);
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .info {
     flex: 0 0 auto;
-    border-right: 2px solid #e0e0e0;
-    padding-right: 25px;
+    border-right: 3px solid #e0e0e0;
+    padding-right: 30px;
     min-width: 120px;
 }
 
@@ -65,8 +73,8 @@ h1 {
 
 .ppl {
     flex: 0 0 auto;
-    border-left: 2px solid #e0e0e0;
-    padding-left: 25px;
+    border-left: 3px solid #e0e0e0;
+    padding-left: 30px;
     min-width: 180px;
 }
 
@@ -81,9 +89,10 @@ h1 {
 
 .time_converter {
     background: rgb(55, 53, 53);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 30px;
+    margin-bottom: 30px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     max-width: 600px;
     margin-left: auto;
@@ -132,6 +141,10 @@ h1 {
     background: #5a67d8;
 }
 
+.user_zone {
+    margin-bottom: 30px;
+}
+
 #converted_time {
     margin-top: 20px;
     font-size: 1.2em;
@@ -151,13 +164,13 @@ h1 {
 .aedt,
 .nzdt {
     background: rgb(55, 53, 53);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 30px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -173,7 +186,8 @@ h1 {
 .acdt:hover,
 .aest:hover,
 .aedt:hover,
-.nzdt:hover {
+.nzdt:hover,
+.time_converter:hover {
 box-shadow: 
 	10px 5px 5px white,
 	-10px -5px 5px white;
@@ -240,9 +254,22 @@ box-shadow:
 /* flex and paddings */
 
 @media (max-width: 768px) {
+    .zones-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
     h1 {
         font-size: 2em;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+    }
+
+    .user_zone {
+        margin-bottom: 25px;
+    }
+
+    .time_converter {
+        margin-bottom: 25px;
     }
 
     .user_zone,
@@ -257,19 +284,18 @@ box-shadow:
     .aedt,
     .nzdt {
         flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-        margin-bottom: 20px;
+        gap: 20px;
+        padding: 25px;
     }
 
     .info,
     .ppl {
         border-right: none;
         border-left: none;
-        border-top: 2px solid #e0e0e0;
+        border-top: 3px solid #e0e0e0;
         padding-right: 0;
         padding-left: 0;
-        padding-top: 15px;
+        padding-top: 20px;
         min-width: auto;
         width: 100%;
     }
@@ -288,15 +314,28 @@ box-shadow:
 }
 
 @media (max-width: 480px) {
+    .zones-container {
+        gap: 20px;
+    }
+
     body {
-        padding: 20px 10px;
+        padding: 30px 15px;
     }
 
     h1 {
         font-size: 1.5em;
     }
 
-    .user_zone,
+    .user_zone {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .time_converter {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
     .est,
     .gmt,
     .cet,
@@ -307,8 +346,7 @@ box-shadow:
     .aest,
     .aedt,
     .nzdt {
-        padding: 15px;
-        margin-bottom: 15px;
+        padding: 20px;
     }
 
     .time p {

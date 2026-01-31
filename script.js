@@ -190,3 +190,6 @@ document.getElementById('convert_btn').addEventListener('click', () => {
 
     document.getElementById('converted_time').textContent = `Converted Time: ${convertedTime}`;
 });
+
+
+document.getElementById('source_time').value = new Date().toISOString().slice(0, 16);
